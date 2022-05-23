@@ -678,6 +678,32 @@ var dato = document.getElementById("dato").value;
       }) 
     })
 
+    const closures = (function(){
+      let mensaje = "";
+
+      function red(){
+        mensaje="red";
+      }
+
+      function blue(){
+        mensaje="blue";
+      }
+
+
+      function green(){
+        mensaje="green";
+      }
+
+      return{
+        red,
+        blue,
+        green
+      }
+    })();
+
+    closures.blue();
+    closures.red();
+    closures.green();
 </script>
 
 </body>
